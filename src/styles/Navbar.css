@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+    letter-spacing: 0.1rem;
+}
+
+.signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 2rem;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.signin:hover {
+    background-color: rgb(0, 155, 0);
+    text-decoration: underline;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 2rem;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.logout:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    text-decoration: underline;
+}
+
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(47, 79, 79);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.logo-subtext {
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}

@@ -1,0 +1,129 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20rem);
+    width: 100vw;
+    gap: 3rem;
+    padding: 2rem 0;
+    justify-content: center;
+    animation: slideUp .8s ease-out forwards;
+}
+
+.add-product {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    animation: enlargeButton 1.3s ease;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.liveevent-list .time {
+    color: red;
+}
+
+.banner {
+    background-color: rgb(47, 79, 79);
+    padding: 1rem 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    animation: slideIn .8s ease-out;
+}
+
+.banner-text {
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.add-product-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    z-index: 1000;
+    animation: enlarge 0.3s ease-out forwards;
+}
+
+.add-product-container.opening {
+    animation: enlarge 0.3s ease-out forwards;
+}
+
+.add-product-container.closing {
+    animation: shrink 0.3s ease-out forwards;
+}
+
+@keyframes enlarge {
+    from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+@keyframes enlargeButton {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

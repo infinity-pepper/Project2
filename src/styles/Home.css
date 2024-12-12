@@ -1,0 +1,15 @@
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  
+    gap: 2rem;  
+    padding: 2rem;  
+}
+
+@media (max-width: 50vw) {
+    .auth-container {
+        flex-direction: column;  
+        gap: 1.5rem; 
+    }
+}

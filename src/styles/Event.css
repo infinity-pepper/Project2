@@ -1,0 +1,193 @@
+.eventWrap {
+    background: #00000000;
+    box-shadow: 0rem 1rem 3rem rgba(47, 79, 79, 1);
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.eventWrap:hover {
+    transform: scale(1.1);
+    box-shadow: 0rem 0rem 3rem rgba(47, 79, 79, 1);
+    cursor: pointer;
+}
+
+.event {
+    color: white;
+    background: rgb(47, 79, 79);
+    border-radius: 1rem;
+    margin: 0 0;
+    padding: 0rem;
+    width: 21rem;
+    height: 28rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.event img {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 21rem;
+    height: 20rem;
+    display: block;
+}
+
+.event-info {
+    padding: 1rem;
+}
+
+img.maps-icon {
+    width: 100%;
+}
+
+.img-container {
+    position: relative;
+}
+
+.maps-btn {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+}
+
+.focused-card-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 81vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.focused-event {
+    position: relative;
+    color: white;
+    background: rgb(47, 79, 79);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    animation: grow 0.3s ease-in-out;
+}
+
+.additional-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    color: #333;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: slideOut 1s ease-in-out forwards;
+    animation-delay: 0.1s;
+    justify-content: right;
+    padding: 1rem;
+    z-index: -1;
+}
+
+.event-information{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.additional-info h2,
+.additional-info h3,
+.additional-info h4 {
+    margin-left: 3rem;
+}
+
+.focused-event.closing {
+    animation: shrink 0.3s ease-in-out forwards;
+}
+
+.focused-event img {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 21rem;
+    height: 20rem;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0rem);
+    
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(20rem);
+
+        opacity: 1;
+    }
+}
+@keyframes grow {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.close-btn-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.focused-card-container:hover .close-btn-container {
+    opacity: 1;
+}
+
+.close-btn {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff4d4f;
+    background: white;
+    border-radius: 50%;
+    padding: 0.3rem 0.7rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+    background-color: #ff4d4f;
+    color: white;
+}

@@ -1,0 +1,97 @@
+.form-container {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: rgb(47, 79, 79);
+  border: 2px solid rgb(47, 79, 79)
+}
+
+.form-header {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="date"] {
+  max-width: 12rem;
+
+}
+
+input[type="time"] {
+  max-width: 8rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.time-container {
+  display: flex;
+  gap: 3rem;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(50, 116, 116);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(66, 148, 148);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: underline;
+}
+
+button:active {
+  background-color: rgb(50, 116, 116);
+}
+
+.message p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.message p[style*="color: red"] {
+  color: red;
+}
+
+.message p[style*="color: green"] {
+  color: green;
+}
